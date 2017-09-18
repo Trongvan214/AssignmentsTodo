@@ -87,7 +87,7 @@ function showTodos() {
                                 '<p><span class="label label-info">' + status + '</span></p>'+
                                 '<p>'+remainingTime(year,month,day)+' Days left</p>'+
                                 '<h3 class="text-capitalize">' + name + '</h3>'+
-                                '<p class="pl-4">- ' + comment + '</p>'+
+                                '<p class="pl-4">' + comment + '</p>'+
                                 '<p>Severity: ' + severity + '</p>'+
                                 '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a> '+
                                 '<a href="#" onclick="deleteAssign(\''+id+'\')" class="btn btn-danger">Delete</a>'+
@@ -103,12 +103,20 @@ function remainingTime(year,month,day)
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   if (distance < 0) {
     return "EXPIRED";
   }
   else 
   {
-    return days;
+    if(days < 1)
+    {
+      return hours;
+    }
+    else if (hours < 1) {
+      return minutes;
+    }
+    else {
+      return days;
+    }
   }
 }
