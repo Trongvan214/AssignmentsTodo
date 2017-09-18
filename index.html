@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Todo App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style>
+      .custom-form-control {
+        box-sizing: border-box;
+        width: 32.8%;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body onload="showTodos()">  
+    <div class="container">
+      <h1 class="text-center">Assignments Todo App</h1>
+      <div class="jumbotron">
+        <form id="assignInputForm">
+          <div class="form-group">
+                <label for="assignName">Assignment Name</label>
+                <input type="text" class="form-control" id="assignName" placeholder="Exp: Physic HW3">
+          </div>
+          <div class="form-group">
+              <label for="assignServerity">Severity</label>
+              <select id="assignServerity" class="form-control">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+          <div class="form-group custom-form-control">
+            <label for="month">Month</label>
+            <select class="form-control" id="month">
+              <option value="default">Select the month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+          <div class="form-group custom-form-control">
+          <label for="day">Day</label>
+          <select class="form-control" id="day">
+            <option value="default">Select the month</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+          </select>
+        </div>
+        <div class="form-group custom-form-control">
+          <label for="year">Year</label>
+          <select class="form-control" id="year">
+            <option value="default">Select the year</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+        </div>
+          <div class="form-group">
+            <label for="addComments">Addition Comments</label>
+            <input type="text" class="form-control" id="addComments" placeholder="Exp: Turn in online/class">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Add</button>
+        </form>
+      </div>
+      <div class="col-lg-12">
+        <div id="assignList">
+        </div>
+      </div>
+    </div>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
